@@ -14,7 +14,6 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: 10)
             }
         }
-        .font(.largeTitle)
         .aspectRatio(2/3, contentMode: .fit)
     }
 }
