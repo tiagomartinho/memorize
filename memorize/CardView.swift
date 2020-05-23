@@ -17,3 +17,12 @@ struct CardView: View {
         .font(.largeTitle)
     }
 }
+
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        HStack {
+        CardView(card: EmojiMemoryGameCard(id: 1, isFaceUp: true, isMatched: false, content: "🎸"))
+        CardView(card: EmojiMemoryGameCard(id: 2, content: ""))
+        }
+    }
+}
