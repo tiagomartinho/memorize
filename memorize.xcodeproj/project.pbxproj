@@ -13,9 +13,11 @@
 		EAE5761824791DAF00BFF43D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE5761724791DAF00BFF43D /* Assets.xcassets */; };
 		EAE5761B24791DAF00BFF43D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE5761A24791DAF00BFF43D /* Preview Assets.xcassets */; };
 		EAE5761E24791DAF00BFF43D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE5761C24791DAF00BFF43D /* LaunchScreen.storyboard */; };
-		EAE5762924791DAF00BFF43D /* memorizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5762824791DAF00BFF43D /* memorizeTests.swift */; };
+		EAE5762924791DAF00BFF43D /* MemoryGameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5762824791DAF00BFF43D /* MemoryGameTest.swift */; };
 		EAE5763424791DAF00BFF43D /* memorizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5763324791DAF00BFF43D /* memorizeUITests.swift */; };
 		EAE5764224791ECD00BFF43D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5764124791ECD00BFF43D /* CardView.swift */; };
+		EAE576452479213000BFF43D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE576442479213000BFF43D /* MemoryGame.swift */; };
+		EAE57647247921B400BFF43D /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57646247921B400BFF43D /* EmojiMemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +47,14 @@
 		EAE5761D24791DAF00BFF43D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAE5761F24791DAF00BFF43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE5762424791DAF00BFF43D /* memorizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memorizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAE5762824791DAF00BFF43D /* memorizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memorizeTests.swift; sourceTree = "<group>"; };
+		EAE5762824791DAF00BFF43D /* MemoryGameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameTest.swift; sourceTree = "<group>"; };
 		EAE5762A24791DAF00BFF43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE5762F24791DAF00BFF43D /* memorizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memorizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE5763324791DAF00BFF43D /* memorizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memorizeUITests.swift; sourceTree = "<group>"; };
 		EAE5763524791DAF00BFF43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE5764124791ECD00BFF43D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EAE576442479213000BFF43D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		EAE57646247921B400BFF43D /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				EAE5761524791DAF00BFF43D /* ContentView.swift */,
 				EAE5764124791ECD00BFF43D /* CardView.swift */,
+				EAE57646247921B400BFF43D /* EmojiMemoryGame.swift */,
+				EAE576442479213000BFF43D /* MemoryGame.swift */,
 				EAE5764324791F2E00BFF43D /* Supporting Files */,
 				EAE5761924791DAF00BFF43D /* Preview Content */,
 			);
@@ -120,7 +126,7 @@
 		EAE5762724791DAF00BFF43D /* memorizeTests */ = {
 			isa = PBXGroup;
 			children = (
-				EAE5762824791DAF00BFF43D /* memorizeTests.swift */,
+				EAE5762824791DAF00BFF43D /* MemoryGameTest.swift */,
 				EAE5762A24791DAF00BFF43D /* Info.plist */,
 			);
 			path = memorizeTests;
@@ -280,8 +286,10 @@
 			files = (
 				EAE5761224791DAF00BFF43D /* AppDelegate.swift in Sources */,
 				EAE5761424791DAF00BFF43D /* SceneDelegate.swift in Sources */,
+				EAE576452479213000BFF43D /* MemoryGame.swift in Sources */,
 				EAE5764224791ECD00BFF43D /* CardView.swift in Sources */,
 				EAE5761624791DAF00BFF43D /* ContentView.swift in Sources */,
+				EAE57647247921B400BFF43D /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE5762924791DAF00BFF43D /* memorizeTests.swift in Sources */,
+				EAE5762924791DAF00BFF43D /* MemoryGameTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
