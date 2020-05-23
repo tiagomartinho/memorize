@@ -15,6 +15,7 @@ struct CardView: View {
             }
         }
         .font(.largeTitle)
+        .aspectRatio(2/3, contentMode: .fit)
     }
 }
 
