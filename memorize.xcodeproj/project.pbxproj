@@ -14,7 +14,7 @@
 		EAE5761B24791DAF00BFF43D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE5761A24791DAF00BFF43D /* Preview Assets.xcassets */; };
 		EAE5761E24791DAF00BFF43D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE5761C24791DAF00BFF43D /* LaunchScreen.storyboard */; };
 		EAE5762924791DAF00BFF43D /* MemoryGameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5762824791DAF00BFF43D /* MemoryGameTest.swift */; };
-		EAE5763424791DAF00BFF43D /* memorizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5763324791DAF00BFF43D /* memorizeUITests.swift */; };
+		EAE5763424791DAF00BFF43D /* MemorizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5763324791DAF00BFF43D /* MemorizeUITests.swift */; };
 		EAE5764224791ECD00BFF43D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5764124791ECD00BFF43D /* CardView.swift */; };
 		EAE576452479213000BFF43D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE576442479213000BFF43D /* MemoryGame.swift */; };
 		EAE57647247921B400BFF43D /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57646247921B400BFF43D /* EmojiMemoryGame.swift */; };
@@ -52,7 +52,7 @@
 		EAE5762824791DAF00BFF43D /* MemoryGameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameTest.swift; sourceTree = "<group>"; };
 		EAE5762A24791DAF00BFF43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE5762F24791DAF00BFF43D /* memorizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memorizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAE5763324791DAF00BFF43D /* memorizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memorizeUITests.swift; sourceTree = "<group>"; };
+		EAE5763324791DAF00BFF43D /* MemorizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeUITests.swift; sourceTree = "<group>"; };
 		EAE5763524791DAF00BFF43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE5764124791ECD00BFF43D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EAE576442479213000BFF43D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		EAE5763224791DAF00BFF43D /* memorizeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				EAE5763324791DAF00BFF43D /* memorizeUITests.swift */,
+				EAE5763324791DAF00BFF43D /* MemorizeUITests.swift */,
 				EAE5763524791DAF00BFF43D /* Info.plist */,
 			);
 			path = memorizeUITests;
@@ -170,6 +170,7 @@
 				EAE5760B24791DAF00BFF43D /* Frameworks */,
 				EAE5760C24791DAF00BFF43D /* Resources */,
 				EAE5764C24792B0500BFF43D /* swiftformat */,
+				EAE5764D24792B4600BFF43D /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -305,6 +306,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftformat >/dev/null; then\nswiftformat ./memorize\nelse\necho \"warning: swiftformat not installed\"\nfi\n";
 		};
+		EAE5764D24792B4600BFF43D /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -335,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE5763424791DAF00BFF43D /* memorizeUITests.swift in Sources */,
+				EAE5763424791DAF00BFF43D /* MemorizeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
