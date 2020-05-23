@@ -1,7 +1,7 @@
 class EmojiMemoryGame {
 
     private var model: MemoryGame<String> = {
-        let emojis = ["👻", "🎃", "🕷","🎁", "🍭"]
+        let emojis = HalloweenEmojis.value
             .shuffled()
             .prefix(Int.random(in: 2...5))
         return MemoryGame<String>(numberOfPairsOfCards: emojis.count) {
