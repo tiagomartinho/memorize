@@ -7,6 +7,8 @@ struct ContentView: View {
                 CardView(isFaceUp: index % 2 == 0)
             }
         }
+        .padding()
+        .foregroundColor(.orange)
     }
 }
 

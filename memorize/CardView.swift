@@ -7,13 +7,14 @@ struct CardView: View {
     var body: some View {
         ZStack {
             if isFaceUp {
-                RoundedRectangle(cornerRadius: 20).foregroundColor(.white)
-                RoundedRectangle(cornerRadius: 20).stroke()
+                RoundedRectangle(cornerRadius: 10).foregroundColor(.white)
+                RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 3)
                 Text("🎸")
             } else {
-                RoundedRectangle(cornerRadius: 20)
+                RoundedRectangle(cornerRadius: 10)
             }
-        }.foregroundColor(.orange)
+        }
+        .font(.largeTitle)
     }
 }
 
