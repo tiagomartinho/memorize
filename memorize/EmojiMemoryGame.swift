@@ -1,7 +1,5 @@
 class EmojiMemoryGame {
-    
-    typealias EmojiMemoryGameCard = MemoryGame<String>.Card
-    
+
     private var model: MemoryGame<String> = {
         let emojis = ["👻", "🎃", "🕷"]
         return MemoryGame<String>(numberOfPairsOfCards: emojis.count) {
