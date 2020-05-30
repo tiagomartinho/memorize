@@ -14,6 +14,7 @@ struct CardView: View {
             }
         }
         .aspectRatio(2 / 3, contentMode: .fit)
+        .animation(.default)
     }
 }
 

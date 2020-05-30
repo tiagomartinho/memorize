@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var viewModel: EmojiMemoryGame
+    @ObservedObject var viewModel: EmojiMemoryGame
 
     var cardFont: Font {
         return viewModel.cards.count >= 5 ? .headline : .largeTitle

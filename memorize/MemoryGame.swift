@@ -3,8 +3,10 @@ import Foundation
 struct MemoryGame<CardContent> {
     private(set) var cards: [Card]
 
-    func choose(card: Card) {
+    mutating func choose(card: Card) {
         print("Card chosen: \(card)")
+        guard let cardIndex = (cards.firstIndex { $0.id == card.id }) else { return }
+        cards[cardIndex].isFaceUp.toggle()
     }
 
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
@@ -19,7 +21,7 @@ struct MemoryGame<CardContent> {
 
     struct Card: Identifiable {
         var id: Int
-        var isFaceUp: Bool = true
+        var isFaceUp: Bool = false
         var isMatched: Bool = false
         var content: CardContent
     }
