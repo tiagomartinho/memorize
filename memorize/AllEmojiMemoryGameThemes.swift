@@ -6,7 +6,10 @@ extension EmojiMemoryGameTheme {
                                               EmojiMemoryGameTheme(name: "Nature",
                                                                    emojis: NatureEmojis.value,
                                                                    numberOfCards: 4,
-                                                                   color: .blue)]
+                                                                   color: .blue),
+                                              EmojiMemoryGameTheme(name: "Activity",
+                                                                   emojis: ActivityEmojis.value,
+                                                                   color: .red)]
 
     static var random: EmojiMemoryGameTheme { all.randomElement()! }
 }

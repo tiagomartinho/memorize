@@ -5,6 +5,7 @@ struct EmojiMemoryCardView: View {
 
     var body: some View {
         VStack {
+            Text(self.viewModel.themeName)
             Grid(viewModel.cards) { card in
                 CardView(card: card)
                     .onTapGesture {
@@ -16,7 +17,7 @@ struct EmojiMemoryCardView: View {
             Button(action: {
                 self.viewModel.newGame()
                 }, label: { Text("New Game") })
-        }
+        }.padding()
     }
 }
 

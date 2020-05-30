@@ -2,8 +2,11 @@ import SwiftUI
 
 class EmojiMemoryGame: ObservableObject {
     @Published private var currentTheme: EmojiMemoryGameTheme?
-
     @Published private var model: MemoryGame<String>?
+
+    var themeName: String {
+        currentTheme?.name ?? ""
+    }
 
     var themeColor: Color {
         currentTheme?.color ?? .clear
