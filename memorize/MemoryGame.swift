@@ -3,7 +3,7 @@ import Foundation
 struct MemoryGame<CardContent> where CardContent: Equatable {
     private(set) var cards: [Card]
 
-    var indexOfTheOneAndOnlyFaceUpCard: Int? {
+    var indexOfTheOnlyFaceUpCard: Int? {
         get {
             let indicesCardsFacingUp = cards.indices.filter { cards[$0].isFaceUp }
             let onlyOneCardIsFacingUp = indicesCardsFacingUp.count == 1
@@ -20,11 +20,11 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         guard let choosenCardIndex = (cards.firstIndex { $0.id == card.id }) else { return }
         let notMatchedAndNotFacingUp = !cards[choosenCardIndex].isFaceUp && !cards[choosenCardIndex].isMatched
         guard notMatchedAndNotFacingUp else { return }
-        if let faceUpCardIndex = indexOfTheOneAndOnlyFaceUpCard {
+        if let faceUpCardIndex = indexOfTheOnlyFaceUpCard {
             tryToMatch(faceUpCardIndex, with: choosenCardIndex)
             cards[choosenCardIndex].isFaceUp = true
         } else {
-            indexOfTheOneAndOnlyFaceUpCard = choosenCardIndex
+            indexOfTheOnlyFaceUpCard = choosenCardIndex
         }
     }
 
