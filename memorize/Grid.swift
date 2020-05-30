@@ -11,8 +11,12 @@ struct Grid<Item, ItemView>: View where Item: Identifiable, ItemView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            self.body(for: GridLayout(itemCount: self.items.count, in: geometry.size))
+            self.body(for: self.layout(for: geometry))
         }
+    }
+
+    func layout(for geometry: GeometryProxy) -> GridLayout {
+        return GridLayout(itemCount: items.count, in: geometry.size)
     }
 
     func body(for layout: GridLayout) -> some View {
@@ -22,9 +26,14 @@ struct Grid<Item, ItemView>: View where Item: Identifiable, ItemView: View {
     }
 
     func body(for item: Item, in layout: GridLayout) -> some View {
-        let index = (items.firstIndex { item.id == $0.id })
-        return viewForItem(item)
-            .frame(width: layout.itemSize.width, height: layout.itemSize.height)
-            .position(layout.location(ofItemAt: index!))
+        let index = items.firstIndex { item.id == $0.id }
+        return Group {
+            if index != nil {
+                viewForItem(item)
+                    .frame(width: layout.itemSize.width,
+                           height: layout.itemSize.height)
+                    .position(layout.location(ofItemAt: index!))
+            }
+        }
     }
 }
