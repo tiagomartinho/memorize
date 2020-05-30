@@ -94,6 +94,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA1825C62482839C00B9C44A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAE5761524791DAF00BFF43D /* EmojiMemoryCardView.swift */,
+				EAE5764124791ECD00BFF43D /* CardView.swift */,
+				EA7AC98F24826EF000CB0B03 /* Grid.swift */,
+				EA7AC98D24826CA000CB0B03 /* GridLayout.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA1825C7248283BE00B9C44A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57646247921B400BFF43D /* EmojiMemoryGame.swift */,
+				EAE57648247924D000BFF43D /* EmojiMemoryGameCard.swift */,
+				EAE576442479213000BFF43D /* MemoryGame.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		EA1825C8248283CB00B9C44A /* Game Themes */ = {
+			isa = PBXGroup;
+			children = (
+				EA7AC99124827B0200CB0B03 /* EmojiMemoryGameTheme.swift */,
+				EA1825C424827CEA00B9C44A /* AllEmojiMemoryGameThemes.swift */,
+				EAE5764A24792ABC00BFF43D /* Emojis.swift */,
+			);
+			path = "Game Themes";
+			sourceTree = "<group>";
+		};
 		EAE5760524791DAF00BFF43D = {
 			isa = PBXGroup;
 			children = (
@@ -117,17 +148,10 @@
 		EAE5761024791DAF00BFF43D /* memorize */ = {
 			isa = PBXGroup;
 			children = (
-				EAE5761524791DAF00BFF43D /* EmojiMemoryCardView.swift */,
-				EAE5764124791ECD00BFF43D /* CardView.swift */,
-				EA7AC98F24826EF000CB0B03 /* Grid.swift */,
-				EA7AC98D24826CA000CB0B03 /* GridLayout.swift */,
-				EAE57646247921B400BFF43D /* EmojiMemoryGame.swift */,
-				EAE57648247924D000BFF43D /* EmojiMemoryGameCard.swift */,
-				EAE576442479213000BFF43D /* MemoryGame.swift */,
 				EAE5761324791DAF00BFF43D /* SceneDelegate.swift */,
-				EA7AC99124827B0200CB0B03 /* EmojiMemoryGameTheme.swift */,
-				EA1825C424827CEA00B9C44A /* AllEmojiMemoryGameThemes.swift */,
-				EAE5764A24792ABC00BFF43D /* Emojis.swift */,
+				EA1825C62482839C00B9C44A /* View */,
+				EA1825C7248283BE00B9C44A /* Game */,
+				EA1825C8248283CB00B9C44A /* Game Themes */,
 				EAE5764324791F2E00BFF43D /* Supporting Files */,
 				EAE5761924791DAF00BFF43D /* Preview Content */,
 			);
