@@ -2,10 +2,8 @@ import Foundation
 
 struct MemoryGame<CardContent> where CardContent: Equatable {
     private(set) var cards: [Card]
-
-    var score: Int {
-        0
-    }
+    private(set) var seenCardsIDs = Set<Int>()
+    private(set) var score = 0
 
     private var indexOfTheOnlyFaceUpCard: Int? {
         get {
@@ -36,7 +34,17 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         if cards[choosenCardIndex].content == cards[faceUpCardIndex].content {
             cards[choosenCardIndex].isMatched = true
             cards[faceUpCardIndex].isMatched = true
+            score += 2
+        } else {
+            if seenCardsIDs.contains(cards[choosenCardIndex].id) {
+                score -= 1
+            }
+            if seenCardsIDs.contains(cards[faceUpCardIndex].id) {
+                score -= 1
+            }
         }
+        seenCardsIDs.insert(cards[choosenCardIndex].id)
+        seenCardsIDs.insert(cards[faceUpCardIndex].id)
     }
 
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
