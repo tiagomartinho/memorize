@@ -12,6 +12,10 @@ class EmojiMemoryGame: ObservableObject {
         currentTheme?.color ?? .clear
     }
 
+    var score: Int {
+        model?.score ?? 0
+    }
+
     var cards: [EmojiMemoryGameCard] {
         model?.cards ?? []
     }

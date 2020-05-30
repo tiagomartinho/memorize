@@ -3,7 +3,11 @@ import Foundation
 struct MemoryGame<CardContent> where CardContent: Equatable {
     private(set) var cards: [Card]
 
-    var indexOfTheOnlyFaceUpCard: Int? {
+    var score: Int {
+        0
+    }
+
+    private var indexOfTheOnlyFaceUpCard: Int? {
         get {
             let indicesCardsFacingUp = cards.indices.filter { cards[$0].isFaceUp }
             let onlyOneCardIsFacingUp = indicesCardsFacingUp.count == 1

@@ -14,9 +14,12 @@ struct EmojiMemoryCardView: View {
             }
             .padding()
             .foregroundColor(self.viewModel.themeColor)
-            Button(action: {
-                self.viewModel.newGame()
+            HStack(spacing: 50) {
+                Text("Current Score: \(self.viewModel.score)")
+                Button(action: {
+                    self.viewModel.newGame()
                 }, label: { Text("New Game") })
+            }
         }.padding()
     }
 }
