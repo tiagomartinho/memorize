@@ -16,7 +16,6 @@ struct ContentView: View {
                     }
             }
         }
-        .font(cardFont)
         .padding()
         .foregroundColor(.orange)
     }
