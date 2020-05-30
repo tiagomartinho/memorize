@@ -26,7 +26,7 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: cornerRadius)
             }
         }
-        .aspectRatio(2 / 3, contentMode: .fit)
+        .padding(3)
         .animation(.default)
         .font(font(for: size))
     }
