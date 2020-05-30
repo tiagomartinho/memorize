@@ -17,17 +17,21 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     }
 
     mutating func choose(card: Card) {
-        guard let choosenIndex = (cards.firstIndex { $0.id == card.id }) else { return }
-        guard !cards[choosenIndex].isFaceUp else { return }
-        guard !cards[choosenIndex].isMatched else { return }
-        if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
-            if cards[choosenIndex].content == cards[potentialMatchIndex].content {
-                cards[choosenIndex].isMatched = true
-                cards[potentialMatchIndex].isMatched = true
-            }
-            cards[choosenIndex].isFaceUp = true
+        guard let choosenCardIndex = (cards.firstIndex { $0.id == card.id }) else { return }
+        let notMatchedAndNotFacingUp = !cards[choosenCardIndex].isFaceUp && !cards[choosenCardIndex].isMatched
+        guard notMatchedAndNotFacingUp else { return }
+        if let faceUpCardIndex = indexOfTheOneAndOnlyFaceUpCard {
+            tryToMatch(faceUpCardIndex, with: choosenCardIndex)
+            cards[choosenCardIndex].isFaceUp = true
         } else {
-            indexOfTheOneAndOnlyFaceUpCard = choosenIndex
+            indexOfTheOneAndOnlyFaceUpCard = choosenCardIndex
+        }
+    }
+
+    private mutating func tryToMatch(_ faceUpCardIndex: Int, with choosenCardIndex: Int) {
+        if cards[choosenCardIndex].content == cards[faceUpCardIndex].content {
+            cards[choosenCardIndex].isMatched = true
+            cards[faceUpCardIndex].isMatched = true
         }
     }
 
